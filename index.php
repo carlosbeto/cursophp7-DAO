@@ -2,11 +2,20 @@
 
 require_once("config.php");
 
-$root = new Usuario();
+//carrega um usuario conforme o ID - descomente as próximas 3 linhas
+//$root = new Usuario();
+//$root -> loadById(3);
+//echo $root;
 
-$root -> loadById(3);
+//Carrega uma lista de usuários - descomente as próximas 2 linhas
 
-echo $root;
+//$lista = Usuario::getList();
+//echo json_encode($lista); 
+
+// Carrega uma lista de usuários buscando pelo login
+$search = Usuario::search("ro");
+echo json_encode($search);
+
 
 /*Esemplo anterior, antes da evolução do curso...
 /*$sql = new sql(); 
